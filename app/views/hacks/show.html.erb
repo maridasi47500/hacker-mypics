@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @hack.title %>
+</p>
+
+<p>
+  <%= @hack.description %>
+</p>
+
+<p>
+  <%#= @hack.user_id %>
+ajoute par GHUIKJH
+</p>
+<table>
+<%@hack.images.each do |pic|%>
+<tr>
+<td>
+<img src="/uploads/<%=pic.image%>" style="height:100px;width:240px;" />
+
+</td>
+<td>
+<%=pic.description%>
+</td>
+<td>
+ajouté par XFHYY
+</td>
+<td><%= button_to 'Destroy', pic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<%end%>
+</table>
+
+<%= link_to 'ajouter une image à ce hack ', addpic_hack_path(@hack) %> |
+<%= link_to 'Edit', edit_hack_path(@hack) %> |
+<%= link_to 'Back', hacks_path %>

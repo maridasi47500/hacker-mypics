@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hackerscorner</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+  </head>
+
+  <body>
+<nav>
+   <%=link_to "tous les hacks", hacks_path%> |
+   <%=link_to "ajouter un hack", new_hack_path%> |
+</nav>
+    <%= yield %>
+  </body>
+</html>
